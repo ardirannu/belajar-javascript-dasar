@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript Dasar - Konversi String dan Number</title>
+  </head>
+  <body>
+    <script>
+      // karna pada javascript operasi matematika hanya dapat diolah jika tipe data == number
+      // maka perlu dilakukan konversi
+      const value1 = parseInt("10");
+      const value2 = 5;
+      const sum = value1 + value2;
+
+      // konversi dari string ke number (bilangan bulat)
+      // parseInt();
+
+      // konversi dari string ke number (bilangan pecahan)
+      // parseFloat;
+
+      // konversi dari string ke number (bilangan bulat atau pecahan)
+      // number();
+
+      // konversi dari number ke string
+      // number.toString();
+
+      document.writeln(`<p> ${sum} </p>`);
+
+      // konversi number ke string
+      const total = value1.toString() + value2.toString();
+      document.writeln(`<p> ${total} </p>`);
+    </script>
+  </body>
+</html>
