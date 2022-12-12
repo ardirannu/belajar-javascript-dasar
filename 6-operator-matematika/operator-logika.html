@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript Dasar - Operator Logika</title>
+  </head>
+  <body>
+    <script>
+      const nilaiUjian = 90;
+      const nilaiAbsen = 80;
+
+      const lulus = nilaiUjian > 80;
+      const lulusAbsen = nilaiAbsen > 75;
+
+      // operator logika dan
+      const result = lulus && lulusAbsen;
+
+      // operator logika atau
+      //   const result = lulus || lulusAbsen;
+
+      //   operator unary ! ==>
+      //   const result = !lulus;
+
+      document.writeln(result);
+    </script>
+  </body>
+</html>
