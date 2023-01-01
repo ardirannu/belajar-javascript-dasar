@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript Dasar - Function</title>
+  </head>
+  <body>
+    <script>
+      // function sayHello(firstName, lastName) {
+      //   document.writeln(`<p>Hello : ${firstName} ${lastName}</p>`);
+      // }
+
+      // // call function
+      // sayHello("Ardianto", "Rannu");
+
+      // function return value
+      // parameter pada javascript bersifat optional => bisa undefined parameternya
+      function sayHello(firstName, lastName) {
+        const say = `Hello ${firstName} ${lastName}`;
+        return say;
+      }
+
+      // default parameter pada function javascript
+      function sayArdi(firstName, lastName = "Rannu") {
+        const ardi = `Hello ${firstName} ${lastName}`;
+        return ardi;
+      }
+
+      // call function
+      const result = sayHello("Ardianto", "Rannu");
+      document.writeln(`<p>${result}</p>`);
+
+      // fucntion return value yg returnnya beda2
+      function getFinalValue(value) {
+        if (value >= 90) {
+          return "A";
+        } else if (value >= 75) {
+          return "B";
+        } else {
+          return "C";
+        }
+      }
+    </script>
+  </body>
+</html>

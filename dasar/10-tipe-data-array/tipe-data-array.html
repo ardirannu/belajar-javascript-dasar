@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript Dasar - Tipe Data Array</title>
+  </head>
+  <body>
+    <script>
+      let arrayNames = ["ardi", "ronaldo", "brian"];
+
+      // menambah data ke array
+      arrayNames.push("mikha", "eko");
+      arrayNames.push(["bayu", "doni"]);
+
+      // mengukur panjang array
+      console.info(arrayNames.length);
+
+      // mendapatkan data di posisi index array
+      console.info(arrayNames[0]);
+
+      // mengubah data pada posisi index array
+      arrayNames[2] = "wijaya";
+
+      // menghapus data sesuai posisi index array
+      delete arrayNames[2];
+
+      // menampilkan data di console bentuk table
+      console.table(arrayNames);
+    </script>
+  </body>
+</html>

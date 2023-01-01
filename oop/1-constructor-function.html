@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript Dasar - Constructor Function</title>
+  </head>
+  <body>
+    <script>
+      // pada javascript versi lama, OOP dibuat menggunakan constructor function
+      // constructor function diawali dengan huruf besar
+      function Person(firstName, lastName) {
+        //menambahkan parameter
+        // artibute variable di constructor function
+        this.firstName = firstName;
+        this.lastName = lastName;
+        // menambahkan method di constructor function
+        this.sayHello = function (name) {
+          console.info(`Hello ${name}, my name is ${this.firstName}`);
+        };
+      }
+
+      // membuat objek dengan constructor function
+      const ardi = new Person();
+      // menambahkan value pada atribute constructor function
+      ardi.firstName = "Ardianto";
+      ardi.lastName = "Rannu";
+      // call function in constructor function
+      ardi.sayHello("Budi");
+
+      // membuat objek lainnya dengan constructor function
+      // const budi = new Person();
+
+      // const ardi = new Person("Ardianto", "Rannu"); //call constructor function dengan langsung mengirim data lewat parameter
+
+      console.log(ardi);
+      console.log(budi);
+    </script>
+  </body>
+</html>

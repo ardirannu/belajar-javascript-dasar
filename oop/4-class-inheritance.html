@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript Dasar - Class Inheritance</title>
+  </head>
+  <body>
+    <script>
+      //pewarisan class, 1 class 1 parent
+
+      class Employee {
+        sayHello(name) {
+          console.info(`Hi ${name}, my name is ${this.name}`);
+        }
+      }
+
+      // pewarisan class employee ke class manager menggunakan extends
+      class Manager extends Employee {
+        //method sayHello dari class employee diwariskan ke class manager
+      }
+
+      const budi = new Employee();
+      budi.name = "Budi";
+      budi.sayHello("Joko");
+
+      const ardi = new Manager();
+      ardi.name = "Ardi";
+      ardi.sayHello("Tono");
+
+      console.info(budi);
+      console.info(ardi);
+    </script>
+  </body>
+</html>

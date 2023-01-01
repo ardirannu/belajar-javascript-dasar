@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript Dasar - Destructuring</title>
+  </head>
+  <body>
+    <script>
+      // destructuring array
+      // const names = ["Ardianto", "Rannu", "Kurniawan", "Rinaldi"];
+      // destructuring adalah teknik mengambil value dalam array secara lebih sederhana
+      // let [firstName, lastName, ...others] = names; //bisa menggunakan spread operator untuk menyimpan data lainnya
+
+      // console.info(firstName);
+      // console.info(lastName);
+      // console.info(others);
+
+      // destructuring pada object
+      const person = {
+        firstName: "Ardianto",
+        lastName: "Rannu",
+        address: {
+          street: "Kost Denova",
+          city: "Makassar",
+          country: "Indonesia",
+        },
+        hobby: "Kuliner, Jalan2",
+      };
+
+      // destructuring pada object
+      // let { firstName, lastName, address, ...others } = person;
+
+      // console.info(firstName);
+      // console.info(lastName);
+      // console.info(address);
+      // console.info(others);
+
+      // destructuring pada nested object
+      let {
+        firstName,
+        lastName,
+        address: { street, city, country },
+        ...others
+      } = person;
+
+      console.info(firstName);
+      console.info(lastName);
+      console.info(street);
+      console.info(city);
+      console.info(country);
+      console.info(others);
+    </script>
+  </body>
+</html>

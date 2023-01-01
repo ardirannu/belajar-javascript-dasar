@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript Dasar - With Statement</title>
+  </head>
+  <body>
+    <script>
+      //  with statement digunakan untuk mempermudah pemanggilan sebuah object
+      const person = {
+        firstName: "Ardi",
+        middleName: "Anto",
+        LastName: "Rannu",
+      };
+
+      with (person) {
+        console.info(firstName);
+        console.info(middleName);
+        console.info(LastName);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript Dasar - For In</title>
+  </head>
+  <body>
+    <script>
+      //  for in sama dengan foreach pada php
+      const person = {
+        firstName: "Ardianto",
+        lastName: "Rannu",
+      };
+
+      for (const property in person) {
+        document.writeln(`<p>Property ${property} : ${person[property]}</p>`);
+      }
+    </script>
+  </body>
+</html>

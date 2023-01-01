@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript Dasar - Constructor Inheritance</title>
+  </head>
+  <body>
+    <script>
+      // memanggil contructor lain di dalam constructor
+      // lebih ke mengcopy seluruh isi dari constructor lain
+      function Employee(firstName) {
+        this.firstName = firstName;
+        this.sayHello = function (name) {
+          console.info(`Hello ${name}, my name is ${this.firstName}`);
+        };
+      }
+
+      function Manager(firstName, lastName) {
+        Employee.call(this, firstName);
+        this.lastName = lastName;
+      }
+
+      const ardi = new Manager("Ardianto", "Rannu");
+      console.info(ardi);
+    </script>
+  </body>
+</html>

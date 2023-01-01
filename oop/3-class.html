@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript Dasar - Class</title>
+  </head>
+  <body>
+    <script>
+      //sejak javascript ES6 pembuatan oop menggunakan kata kunci Class
+      // tidak lagi menggunakan constructor function
+      class Person {
+        //constructor di class, dapat digunakan untuk mengirim property ke class
+        constructor(name) {
+          this.name = name; //menambah property di class
+        }
+
+        // menambahkan method ke dalam class, yang akan disimpan otomatis ke prototype
+        sayHello(name) {
+          console.info(`Hi ${name}, my name is ${this.name}`);
+        }
+      }
+
+      const ardi = new Person("Ardianto Rannu");
+      console.info(ardi);
+      ardi.sayHello("tes"); //call method di class
+    </script>
+  </body>
+</html>
