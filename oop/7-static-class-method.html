@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript Dasar - Static Class Method</title>
+  </head>
+  <body>
+    <script>
+      // static class method digunakan untuk membuat atility method atau function
+      // cara mengakses static class method tidak lagi lewat object melainkan langsung lewat class
+      // static class method bersifat global dapat diakses dimana saja
+
+      class MathUtil {
+        // dengan menggunakan static, property tidak akan menjadi milik instance object
+        // melainkan jadi milik class
+        static sum(...numbers) {
+          let total = 0;
+          for (const number of numbers) {
+            total += number;
+          }
+          return total;
+        }
+      }
+
+      // call static method
+      const sum = MathUtil.sum(1, 2, 3);
+      console.info(sum);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript Dasar - Static Class Field</title>
+  </head>
+  <body>
+    <script>
+      // static class field digunakan untuk membuat atility field atau function
+      // cara mengakses static class field tidak lagi lewat object melainkan langsung lewat class
+      // static class field bersifat global dapat diakses dimana saja
+
+      class Config {
+        // dengan menggunakan static, property tidak akan menjadi milik instance object
+        // melainkan jadi milik class
+        static name = "Belajar JS";
+        static version = 1.0;
+        static author = "Ardianto Rannu";
+      }
+
+      const config = new Config();
+      console.info(config);
+
+      // cara akses static class field
+      console.info(Config.name);
+      console.info(Config.version);
+      console.info(Config.author);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript Dasar - Getter dan Setter di Class</title>
+  </head>
+  <body>
+    <script>
+      class Person {
+        constructor(firstName, lastName) {
+          this.firstName = firstName;
+          this.lastName = lastName;
+        }
+
+        // getter dan setter pada class akan tersimpan di prototype
+        get fullName() {
+          return `${this.firstName} ${this.lastName}`;
+        }
+
+        set fullName(value) {
+          const result = value.split(" ");
+          this.firstName = result[0];
+          this.lastName = result[0];
+        }
+      }
+
+      const ardi = new Person("Ardianto", "Rannu");
+      console.info(ardi.fullName); //call getter
+      console.info((ardi.fullName = "tes setter")); //call setter
+    </script>
+  </body>
+</html>

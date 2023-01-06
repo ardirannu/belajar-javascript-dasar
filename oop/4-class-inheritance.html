@@ -10,22 +10,37 @@
       //pewarisan class, 1 class 1 parent
 
       class Employee {
+        // menambah constructor di parent yg akan diwariskan ke class turunannya
+        constructor(firstName) {
+          this.firstName = firstName;
+        }
+
         sayHello(name) {
-          console.info(`Hi ${name}, my name is ${this.name}`);
+          console.info(`Hi ${name}, my name is ${this.firstName}`);
         }
       }
 
       // pewarisan class employee ke class manager menggunakan extends
       class Manager extends Employee {
-        //method sayHello dari class employee diwariskan ke class manager
+        // class manager secara otomatis memiliki constructor milik employee
+        // untuk memanggil constructor di child class kita harus juga wajib memanggil constructor dari parent
+        // untuk memanggil constructor dari parent, bisa mengunakan kata kunci super
+        constructor(firstName, lastName) {
+          super(firstName); //memanggil constuctor dari parent
+          this.lastName = lastName; //menambahkan parameter lainnya
+        }
+        // function dari parent teroverride
+        sayHello(name) {
+          console.info(
+            `Hi ${name}, my name is manager ${this.firstName} ${this.lastName}`
+          );
+        }
       }
 
-      const budi = new Employee();
-      budi.name = "Budi";
+      const budi = new Employee("Budi");
       budi.sayHello("Joko");
 
-      const ardi = new Manager();
-      ardi.name = "Ardi";
+      const ardi = new Manager("Ardi", "Rannu");
       ardi.sayHello("Tono");
 
       console.info(budi);
