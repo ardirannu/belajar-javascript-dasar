@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript Dasar - Number</title>
+  </head>
+  <body>
+    <script>
+        // Number merupakan function yg digunakan untuk mengkonversi ke tipe data number
+        const input = "12345";
+        const number = Number(input);
+
+        console.info(number);
+        console.info(typeof(number));
+
+        // number memiliki beberapa static property
+        console.info(Number.isNaN("123")); //untuk mengecek value isNotANumber atau bukan
+        console.info(Number.isInteger(123)); //untuk mengecek value berupa integer atau bukan
+
+        // instance method
+        const value = Number(12345);
+        console.info(value.toString(2)); //untuk merubah number menjadi binary
+        console.info(value.toLocaleString("id-ID")); //untuk merubah number menjadi string to local negara
+    </script>
+  </body>
+</html>
