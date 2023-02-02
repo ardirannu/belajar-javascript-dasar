@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript Dasar - JSON</title>
+  </head>
+  <body>
+    <script>
+        const person = {
+          firstName: "Ardi",
+          midName: "Anto",
+          lastName: "Rannu",
+          address: {
+            country: "Indonesia",
+            city: "Makassar",
+          },
+          hobbies: [
+            "Game", "Libur", "Kulineran"
+          ]
+        };
+
+        const json = JSON.stringify(person); //konversi dari object javascript ke bentuk json
+        console.info(json);
+
+        const json_parse = JSON.parse(json); //konversi dari json ke bentuk object javascript
+        console.info(json_parse);
+    </script>
+  </body>
+</html>

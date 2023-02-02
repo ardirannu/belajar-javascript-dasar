@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element</title>
+</head>
+<body>
+    <h1 id="title">Element H1</h1>
+    <p id="description">Element Paragraph</p>
+    <p id="tes">Tes remove</p>
+
+    <div id="content">
+
+    </div>
+    
+    <script>
+        const title = document.getElementById('title');
+        title.textContent = "Belajar javascript DOM"; //mengubah data yg ada di element
+
+        console.info(title.id); //return id
+        console.info(title.tagName); //return tagname
+        console.info(title.className); //return class name
+
+        // remove element
+        document.getElementById("tes").remove();
+
+        // create element
+        const content = document.getElementById('content'); //memanggil element content tempat menyimpan element baru
+        content.textContent = "Belajar JS";
+        content.appendChild(title);
+    </script>
+</body>
+</html>

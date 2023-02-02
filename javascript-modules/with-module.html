@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>With Module</title>
+    <!-- ketika menggunakan import from kita tidak perlu lagi memanggil scripts src -->
+    <!-- <script type="module" src="scripts/say.js"></script>  -->
+</head>
+<body>
+    <script type="module">
+        // untuk menghindari tabrakan dikarenakan nama func/class/variable yg sama, 
+        // kita bisa menggunakan alias ==> as 
+        import {sayHello as sayHai, sayGoodBye, name, Person} from "./scripts/say.js";
+
+        sayHai("Ardi");
+        sayGoodBye("Rannu");
+        console.info(name);
+
+        // call class
+        const person = new Person("Ardi");
+        person.sayHello("Rannu");
+
+    </script>
+</body>
+</html>

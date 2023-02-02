@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript Dasar - String</title>
+  </head>
+  <body>
+    <script>
+        // String memiliki beberapa instance method yg berfungsi untuk memanipulasi data string
+        const name = "Ardianto Rannu";
+        console.info(name.length); //mengukur panjang karakter
+        console.info(name.toLowerCase()); //untuk merubah string menjadi huruf kecil semua
+        console.info(name.toUpperCase()); //untuk merubah string menjadi huruf besar semua
+        console.info(name.split(" ")); //untuk memilah string berdasarkan parameter
+
+        const input = "    input data     ";
+        console.info(input.trim()); //menghapus karakter spasi di ujung kiri dan kanan
+        console.info(input.trimStart()); //menghapus karakter spasi di ujung kiri
+        console.info(input.trimEnd()); //menghapus karakter spasi di ujung kanan
+    </script>
+  </body>
+</html>

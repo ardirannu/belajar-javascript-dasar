@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript Dasar - Array</title>
+  </head>
+  <body>
+    <script>
+        // instance method di Array
+        // forEach() => berfungsi untuk mengiterasi array
+        const array = ["Ardi", "Bayu", "Budi"];
+        array.forEach(function(value, index){
+          console.info(`${index} : ${value}`);
+        });
+
+
+        // array queue (struktur data antrian)
+        const queue = [];
+
+        queue.push("Ardi"); //menggunakan push untuk memasukkan data dalam array
+        queue.push("Budi");
+        queue.push("Bayu");
+
+        console.info(queue.shift()); //menggunakan shift untuk mengeluarkan data yg index paling DEPAN dalam array
+        console.info(queue.shift());
+        console.info(queue.shift());
+
+
+        // array stack (struktur data tumpukan) kebalikan dari queue
+        const stack = [];
+
+        stack.push("Ardi"); //menggunakan push untuk memasukkan data dalam array
+        stack.push("Budi");
+        stack.push("Bayu");
+
+        console.info(stack.pop()); //menggunakan pop untuk mengeluarkan data yg index paling BELAKANG dalam array
+        console.info(stack.pop());
+        console.info(stack.pop());
+
+
+        // array search
+        const source = [1, 2, 3, 4, 5, 6, 7 ];
+        console.info(source.find(value => value == 2)); //mencari data sesuai kondisi
+        console.info(source.findIndex(value => value == 4)); //mencari data index sesuai kondisi (return indexnya)
+        console.info(source.includes(7)); //mencari data ada dalam array atau tidak (return boolean)
+
+
+        //array filter
+        const angka = [1, 2, 3, 4, 5, 6, 7 ];
+        const ganjil = angka.filter(value => value % 2 === 1); //mencari angka ganjil dengan array filter
+        const genap = angka.filter(value => value % 2 === 0); //mencari angka genap dengan array filter
+        
+        console.info(ganjil);
+        console.info(genap);
+
+
+        // array transform
+        // const names = "Ardi Budi Bayu".split(" "); //memilah string menjadi array dengan method split
+        const names = ["Ardi", "Budi", "Bayu"];
+        // map melakukan transform tiap value dan menghasilkan array baru
+        console.info(names.map(value => value.toUpperCase())); //melakukan transform data dengan map
+        console.info(names.map(value => value.toLowerCase())); //melakukan transform data dengan map
+    
+        // reduce melakukan transform dengan menggunakan value array dan value selanjutnya, 
+        // lalu hasilnya dilanjutkan ke iterasi selanjutnya
+        const nameReduce = names.reduce((before, value) => before + " " + value);
+        console.info(nameReduce);
+
+        const number2 = [1, 2, 3, 4, 5];
+        const number2Reduce = number2.reduce((before, value) => before + value);
+        console.info(number2Reduce);
+    </script>
+  </body>
+</html>

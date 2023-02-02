@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript Dasar - Date</title>
+  </head>
+  <body>
+    <script>
+        // Static method Date
+        const date = new Date(); //membuat date dengan object Date
+        console.info(date);
+
+        const date1 = new Date(2023, 00, 15); //membuat date dengan menentukan tanggal
+        console.info(date1);
+
+        const dateFromMillis = new Date(1673792805686); //mengkonversi data epoch ke date
+        console.info(dateFromMillis);
+
+        const timestamp = Date.now(); //membuat epoch dari tanggal saat ini
+        console.info(timestamp);
+
+        console.info(date1.getTime()); //membuat epoch dari tanggal
+
+        const tanggal = "2022-01-15"; //parsing date string ke date epoch
+        console.info(Date.parse(tanggal));
+
+        // getter dan setter
+        const date3 = new Date();
+
+        console.info(date.getFullYear());
+        console.info(date.getMonth());
+        console.info(date.getDate());
+        console.info(date.getHours());
+        console.info(date.getMinutes());
+        console.info(date.getSeconds());
+        console.info(date.getTimezoneOffset());
+    </script>
+  </body>
+</html>
